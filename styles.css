@@ -1,0 +1,143 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+    margin: 3px;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: Arial;
+}
+
+.top-image {
+   display: block;
+   margin: 0 auto;
+
+}
+
+.credit {
+    font-size: 12px;
+    margin-left: 15px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+.intro {
+    margin-bottom: 25px;
+}
+
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.headline {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 15px;
+}
+
+.container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.credits {
+    display: block;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 100px;
+}
+
+.chart {
+    display: block;
+    margin: 0 auto;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 10px;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+img {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.top-image {
+   display: block;
+   margin: 0 auto;
+   max-width: 1000px;
+
+}
+
+.headline {
+    display: block;
+    max-width: 850px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 5px;
+}
+
+.credit {
+    display: inline-block;
+    max-width: 700px;
+}
+.story {
+    display: block;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.container {
+    display: inline-block;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.credits {
+    display: block;
+    margin: 0 auto;
+    max-width: 850px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.chart {
+    display: in-line block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    max-width: 600px;
+}
+
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
